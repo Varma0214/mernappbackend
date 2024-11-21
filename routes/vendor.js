@@ -17,8 +17,8 @@ router.post('/add', async (req, res) => {
 
 router.get('/', async (req, res) => {
     try {
-      const vendors = await Vendor.find(); // Fetch vendors from the database
-      res.json(vendors); // Return the vendors array as JSON
+      const vendors = await Vendor.find(); 
+      res.json(vendors); 
     } catch (err) {
       console.error("Error fetching vendors:", err);
       res.status(500).json({ error: 'Error fetching vendors' });

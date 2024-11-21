@@ -7,11 +7,7 @@ const cors = require('cors');
 
 
 const app = express();
-app.use(cors({
-origin:["https://mernapp-frontend-blond.vercel.app"],
-  methods:["POST","GET"],
-  credentials:true}
-            ));
+app.use(cors());
 require("./models/db")
 app.use(express.json());
 app.use('/api/resources', resourceRoutes);
